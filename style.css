@@ -1,0 +1,99 @@
+
+/* Setting the whole page padding and flex column for entire page */
+body {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Typography */
+
+h1 {
+    font-size: 46px;
+}
+
+p, a {
+    font-size: 24px;
+    line-height: 36px;
+}
+
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DF7857;
+    padding-block: 64px;
+}
+
+/* First part of page (image and first paragraph) */
+section {
+    display: flex;
+    gap: 16px;
+}
+
+.image-wrapper {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-wrapper > div {
+    width: 80%;
+    margin: 0 auto;
+   
+}
+
+.image-wrapper p {
+    text-align: center;
+    margin-top: 16px;
+}
+
+/* I was having trouble to set the image properlly, after doing some research the webkit tool solved the problem */
+img {
+    width: -webkit-fill-available;
+    border-radius: 50%;
+}
+
+.summary {
+    background-color: #0E8388;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Last 3 divs with text */
+.content > div {
+    background-color: #FDD36A;
+    padding: 32px;
+}
+
+
+/* Footer */
+footer {
+    display: flex;
+    gap: 8px;
+}
+
+/* I like using first child / not first child to make the color are in the proper place */
+footer div:first-child {
+    background-color: #DF7857;
+    padding: 32px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div:not(:first-child) {
+    background-color: #5D9C59;
+    padding: 16px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
